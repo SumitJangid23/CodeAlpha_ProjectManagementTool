@@ -47,7 +47,7 @@ app.use("/api/comments", require("./routes/commentRoutes"));
 app.use("/api/analytics", require("./routes/analyticsRoutes"));
 
 app.use("/api/workload", require("./routes/workloadRoutes"));
-app.use("/api/health", require("./routes/healthRoutes"));
+
 app.use("/api/risk", require("./routes/riskRoutes"));
 app.use("/api/users", userRoutes);
 app.get("/", (req, res) => {
