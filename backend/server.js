@@ -50,7 +50,12 @@ app.use("/api/workload", require("./routes/workloadRoutes"));
 app.use("/api/health", require("./routes/healthRoutes"));
 app.use("/api/risk", require("./routes/riskRoutes"));
 app.use("/api/users", userRoutes);
-
+app.get("/", (req, res) => {
+  res.send("Backend is running 🚀");
+});
+app.get("/api/health", (req, res) => {
+  res.json({ status: "OK" });
+});
 
 io.on("connection", (socket) => {
   console.log("User connected:", socket.id);
